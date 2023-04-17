@@ -12,12 +12,18 @@ function Navbar() {
 
     function scrollFunction() {
       if(document.getElementById('navbar')) {
-        console.log((document.body.scrollTop))
+        if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          document.getElementById('navbar').classList.add('shadow-navbar')
+          document.getElementById('navbar').classList.add('bg-white')
+        }else {
+          document.getElementById('navbar').classList.remove('shadow-navbar')
+          document.getElementById('navbar').classList.remove('bg-white')
+        }
       }
     }
 
     return(
-      <nav id='navbar' className='w-full py-4 top-0 z-40 fixed'>
+      <nav id='navbar' className='w-full py-4 top-0 z-40 transition duration-300 ease-in-out fixed'>
           <div className="px-4 sm:px-6">
               <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
                   <Link to='/' className="ml-4 mt-2">
@@ -26,7 +32,7 @@ function Navbar() {
                   <div className="ml-4 mt-2 flex-shrink-0">
                     <NavLink to='/cases' className="text-lg inline-flex font-medium leading-6 text-gray-900 mx-4 border-b-2 border-transparent hover:border-indigo-500">Cases</NavLink>
                     <NavLink to='/services' className="text-lg inline-flex font-medium leading-6 text-gray-900 mx-4 border-b-2 border-transparent hover:border-indigo-500">Services</NavLink>
-                    <NavLink to='/carrers' className="text-lg inline-flex font-medium leading-6 text-gray-900 mx-4 border-b-2 border-transparent hover:border-indigo-500">Carrers</NavLink>
+                    <NavLink to='/careers' className="text-lg inline-flex font-medium leading-6 text-gray-900 mx-4 border-b-2 border-transparent hover:border-indigo-500">Careers</NavLink>
                     <NavLink to='/about' className="text-lg inline-flex font-medium leading-6 text-gray-900 mx-4 border-b-2 border-transparent hover:border-indigo-500">About Us</NavLink>
                     <NavLink to='/blog' className="text-lg inline-flex font-medium leading-6 text-gray-900 mx-4 border-b-2 border-transparent hover:border-indigo-500">Blog</NavLink>
                     <NavLink to='/contact' className="text-lg inline-flex font-medium leading-6 text-gray-900 mx-4 border-b-2 border-transparent hover:border-indigo-500">Contact</NavLink>
