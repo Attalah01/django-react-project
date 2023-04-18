@@ -6,6 +6,7 @@ import UseCases from "components/home/UseCases"
 import Features from "components/home/Features"
 import CTA from "components/home/CTA"
 import LogoCloud from "components/home/LogoCloud"
+import BlogList from "components/home/BlogList"
 import Layout from "hocs/layouts/Layout"
 
 function Home(){
@@ -19,6 +20,7 @@ function Home(){
                 <Features />
                 <CTA />
                 <LogoCloud />
+                <BlogList />
             </div>
             <Footer />
         </Layout>
