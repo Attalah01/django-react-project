@@ -8,6 +8,7 @@ import CTA from "components/home/CTA"
 import LogoCloud from "components/home/LogoCloud"
 import BlogList from "components/home/BlogList"
 import Layout from "hocs/layouts/Layout"
+import Scroll from "components/SmoothScrollbar"
 import { useEffect } from "react"
 
 function Home(){
@@ -17,7 +18,7 @@ function Home(){
     return(
         <Layout>
             <Navbar />
-            <div className='pt-28'>
+            <div data-scroll-section className='pt-28'>
                 <Header />
                 <Incentives />
                 <UseCases />

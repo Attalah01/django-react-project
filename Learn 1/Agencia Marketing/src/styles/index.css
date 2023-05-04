@@ -30,6 +30,10 @@
   border-radius: 10px;
 }
 
+body {
+  height: 100vh;
+}
+
 .rec.rec-arrow:focus:enabled {
   background-color: #0B1014;
   color: #eeeeee;
