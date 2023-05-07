@@ -176,6 +176,7 @@ function Services(){
           <Navbar />
           <div className="pt-28">
             <Header />
+            <div className="py-12 bg-gray-50"></div>
             <ServiceList
               posts={posts_software}
               section_title={"Software and Product Development"}

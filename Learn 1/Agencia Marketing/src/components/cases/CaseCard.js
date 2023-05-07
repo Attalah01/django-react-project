@@ -6,18 +6,18 @@ function CaseCard({data,index}){
       <Link
         to="/cases/id"
         onMouseEnter={() => {
-        //   const title = document.getElementById(index)
-        //   title.classList.add('hover:underline')
+          // const title_element = document.getElementById(index);
+          // title_element.classList.add("text-orange-500");
           const img = document.getElementById(data.id);
           img.classList.add("scale-110");
         }}
         onMouseLeave={() => {
-        //   const title = document.getElementById(index)
-        //   title.classList.remove('hover:underline')
+          // const title_element = document.getElementById(index);
+          // title_element.classList.remove("text-orange-500");
           const img = document.getElementById(data.id);
           img.classList.remove("scale-110");
         }}
-        className="flex flex-col overflow-hidden rounded-lg shadow-lg"
+        className="flex flex-col overflow-hidden  rounded-lg shadow-lg"
       >
         <div className="flex-shrink-0">
           <img
@@ -48,7 +48,7 @@ function CaseCard({data,index}){
           </div>
         </div>
       </Link>
-    )
+    );
 }
 
 export default CaseCard

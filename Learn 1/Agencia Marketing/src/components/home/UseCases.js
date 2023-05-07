@@ -61,18 +61,24 @@ const posts = [
         <div className="absolute inset-0">
           <div className="h-1/3 bg-white sm:h-2/3" />
         </div>
-        <div className="relative mx-auto max-w-7xl">
+        <div className="relative mx-auto lg:mx-12 max-w-full">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Some of our cases</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
-            </p>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Some of our cases
+            </h2>
           </div>
           <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
             {posts.map((post) => (
-              <div key={post.title} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+              <div
+                key={post.title}
+                className="flex flex-col overflow-hidden rounded-lg shadow-lg"
+              >
                 <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
+                  <img
+                    className="h-48 w-full object-cover"
+                    src={post.imageUrl}
+                    alt=""
+                  />
                 </div>
                 <div className="flex flex-1 flex-col justify-between bg-white p-6">
                   <div className="flex-1">
@@ -82,15 +88,23 @@ const posts = [
                       </a>
                     </p>
                     <a href={post.href} className="mt-2 block">
-                      <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                      <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                      <p className="text-xl font-semibold text-gray-900">
+                        {post.title}
+                      </p>
+                      <p className="mt-3 text-base text-gray-500">
+                        {post.description}
+                      </p>
                     </a>
                   </div>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
                       <a href={post.author.href}>
                         <span className="sr-only">{post.author.name}</span>
-                        <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
+                        <img
+                          className="h-10 w-10 rounded-full"
+                          src={post.author.imageUrl}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="ml-3">
@@ -112,5 +126,5 @@ const posts = [
           </div>
         </div>
       </div>
-    )
+    );
   }
