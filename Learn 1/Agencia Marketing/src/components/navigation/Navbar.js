@@ -3,30 +3,31 @@ import { NavLink, Link } from 'react-router-dom';
 import logo from 'assets/img/logo512.png'
 import { useState, Fragment, useEffect } from 'react';
 import { Popover, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const solutions = [
   {
-    name: "Casos",
+    name: "Cases",
     description: "Measure actions your users take",
-    href: "/casos",
+    href: "/cases",
     icon: IconOne,
   },
   {
-    name: "Servicios",
+    name: "Services",
     description: "Create your own targeted content",
-    href: "/servicios",
+    href: "/services",
     icon: IconTwo,
   },
   {
-    name: "Nosotros",
+    name: "About Us",
     description: "Keep track of your growth",
-    href: "/nosotros",
+    href: "/about",
     icon: IconThree,
   },
   {
-    name: "Carreras",
+    name: "Careers",
     description: "Keep track of your growth",
-    href: "/carreras",
+    href: "/careers",
     icon: IconThree,
   },
   {
@@ -36,9 +37,9 @@ const solutions = [
     icon: IconThree,
   },
   {
-    name: "Contacto",
+    name: "Contact",
     description: "Keep track of your growth",
-    href: "/contacto",
+    href: "/contact",
     icon: IconThree,
   },
 ];
@@ -123,14 +124,7 @@ function Navbar() {
           {/* Mobile Responsive */}
           <div className="-ml-4 -mt-2 lg:hidden flex flex-wrap items-center justify-between sm:flex-nowrap md:px-4 px-2">
             <Link to="/" className="ml-4 mt-2">
-              <img
-                src={
-                  logo
-                }
-                width={100}
-                height={100}
-                className=""
-              />
+              <img src={logo} width={100} height={100} className="" />
             </Link>
             <div className="ml-4 mt-2 flex-shrink-0">
               <Popover className="relative">
@@ -138,16 +132,41 @@ function Navbar() {
                   <>
                     <Popover.Button
                       className={`
-                                ${open ? "" : "text-opacity-90"}
-                                focus:ring-none focus:outline-none`}
+                      ${open ? "" : "text-opacity-90"}
+                      focus:ring-none focus:outline-none`}
                     >
                       {open ? (
-                        <i className="bx bx-x text-4xl"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-8 h-8"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
                       ) : (
-                        <i className="bx bx-menu text-4xl"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-8 h-8"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                          />
+                        </svg>
                       )}
                     </Popover.Button>
-
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-200"
