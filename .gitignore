@@ -7,7 +7,7 @@
 *.pyc
 __pycache__/
 local_settings.py
-db.sqlite3/
+db.sqlite3
 db.sqlite3-journal
 media/
 
@@ -269,7 +269,7 @@ logs
 **/*.backup.*
 **/*.back.*
 
-/node_modules/
+node_modules
 bower_components
 
 *.sublime*
@@ -281,6 +281,3 @@ sketch
 /.vscode
 
 # End of https://www.toptal.com/developers/gitignore/api/react,django,python
-node_modules
-node_modules
-node_modules
