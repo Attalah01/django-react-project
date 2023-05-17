@@ -10,14 +10,14 @@ import Footer from "components/navigation/Footer";
 import Navbar from "components/navigation/Navbar";
 import Layout from "hocs/layouts/Layout";
 import { useEffect } from "react";
-import { HelmetProvider, Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <HelmetProvider>
+    <Layout>
       <Helmet>
         <title>Asuna | About Us</title>
         <meta
@@ -26,7 +26,7 @@ function About() {
         />
         <meta
           name="keywords"
-          content="Software agency, digital marketing, creacion de pagina web"
+          content="Software agency, digital marketing, web creation"
         />
         <meta name="robots" content="all" />
         <link rel="canonical" href="https://www.rcdev.com/" />
@@ -57,21 +57,19 @@ function About() {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      <Layout>
-        <Navbar />
-        <div className="pt-28">
-          <Header />
-          <TestStats />
-          <Images />
-          <Clients />
-          <LogoCloud />
-          <Features />
-          <Team />
-          <CTA />
-        </div>
-        <Footer />
-      </Layout>
-    </HelmetProvider>
+      <Navbar />
+      <div className="pt-28">
+        <Header />
+        <TestStats />
+        <Images />
+        <Clients />
+        <LogoCloud />
+        <Features />
+        <Team />
+        <CTA />
+      </div>
+      <Footer />
+    </Layout>
   );
 }
 export default About;

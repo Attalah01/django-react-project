@@ -1,19 +1,32 @@
 import Footer from "components/navigation/Footer";
 import Navbar from "components/navigation/Navbar";
-import Header from "components/cases/Header";
-import CaseList from "components/cases/CaseList";
 import Layout from "hocs/layouts/Layout";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { connect } from "react-redux";
+import { useParams } from "react-router-dom";
+import { search_blog, search_blog_page } from "redux/actions/blog/blog";
 
-function Cases() {
+function Search({
+    posts,
+    count,
+    next,
+    previous,
+    search_blog,
+    search_blog_page,
+}) {
+  const params = useParams();
+  const term = params.term;
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    search_blog(term);
   }, []);
+
   return (
     <Layout>
       <Helmet>
-        <title>Asuna | Cases</title>
+        <title>Asuna | Blog</title>
         <meta
           name="description"
           content="Software digital marketing. Web and app services"
@@ -50,14 +63,22 @@ function Cases() {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-
       <Navbar />
-      <div className="pt-28">
-        <Header />
-        <CaseList />
+      <div className="pt-24">
+        Search Posts
       </div>
       <Footer />
     </Layout>
   );
 }
-export default Cases;
+const mapStateToProps = (state) => ({
+  posts: state.blog.filtered_posts,
+  count: state.blog.count,
+  next: state.blog.next,
+  previous: state.blog.previous,
+});
+
+export default connect(mapStateToProps, {
+  search_blog,
+  search_blog_page,
+})(Search);

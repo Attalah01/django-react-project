@@ -16,7 +16,7 @@ function App() {
         />
         <meta
           name="keywords"
-          content="Software agency, digital marketing, creacion de pagina web"
+          content="Software agency, digital marketing, web creation"
         />
         <meta name="robots" content="all" />
         <link rel="canonical" href="https://www.rcdev.com/" />

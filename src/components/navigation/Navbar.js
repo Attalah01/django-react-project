@@ -73,7 +73,7 @@ function Navbar() {
         <div className="px-4 sm:px-6">
           <div className="-ml-4 -mt-2 hidden lg:flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
             <Link to="/" className="ml-4 mt-2">
-              <img src={logo} width={100} height={90} className="" />
+              <img src={logo} width={80} height={70} className="" />
             </Link>
             <div className="ml-4 mt-2 flex-shrink-0">
               <NavLink
@@ -124,7 +124,7 @@ function Navbar() {
           {/* Mobile Responsive */}
           <div className="-ml-4 -mt-2 lg:hidden flex flex-wrap items-center justify-between sm:flex-nowrap md:px-4 px-2">
             <Link to="/" className="ml-4 mt-2">
-              <img src={logo} width={100} height={100} className="" />
+              <img src={logo} width={80} height={70} className="" />
             </Link>
             <div className="ml-4 mt-2 flex-shrink-0">
               <Popover className="relative">

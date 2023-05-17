@@ -6,8 +6,10 @@ import Cases from "containers/pages/Cases";
 import Contact from "containers/pages/Contact";
 import Home from "containers/pages/Home";
 import Services from "containers/pages/Services";
+import Category from "containers/pages/Category";
 import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import Search from "containers/pages/Search";
 
 function AnimatedRoutes() {
     const location = useLocation()
@@ -25,6 +27,8 @@ function AnimatedRoutes() {
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/category/:slug" element={<Category />} />
+                <Route path="/s=:term" element={<Search />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
         </AnimatePresence>
