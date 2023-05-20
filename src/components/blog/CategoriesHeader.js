@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+// import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ function CategoriesHeader({ categories }) {
           <div className="space-x-8 px-6">
             <div className="relative">
               <div className="relative -mb-6 w-full overflow-x-auto pb-6">
-                <ul role="list" className="mx-4 inline-flex space-x-6 sm:mx-6 ">
+                <ul className="mx-4 inline-flex space-x-6 sm:mx-6 ">
                   <Link
                     to="/blog"
                     className={`${
