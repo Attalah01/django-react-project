@@ -7,7 +7,7 @@
 *.pyc
 __pycache__/
 local_settings.py
-db.sqlite3
+db.sqlite3/
 db.sqlite3-journal
 media/
 
@@ -132,8 +132,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
-.venv
+.env/
+.venv/
 env/
 venv/
 ENV/
@@ -269,7 +269,7 @@ logs
 **/*.backup.*
 **/*.back.*
 
-node_modules
+node_modules/
 bower_components
 
 *.sublime*
