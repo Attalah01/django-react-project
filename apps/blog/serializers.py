@@ -1,10 +1,10 @@
 from rest_framework import serializers
+from .models import *
 from apps.category.serializers import CategorySerializer
 
-from .models import *
-
 class PostSerializer(serializers.ModelSerializer):
-    class Meta:
+    category=CategorySerializer()
+    class Meta: 
         model=Post
         fields=[
             'id',
@@ -16,9 +16,9 @@ class PostSerializer(serializers.ModelSerializer):
             'time_read',
             'published',
             'views',
-            'category',
+            'category'
         ]
-        
+
 class PostListSerializer(serializers.ModelSerializer):
     category=CategorySerializer()
     class Meta: 
@@ -32,5 +32,5 @@ class PostListSerializer(serializers.ModelSerializer):
             'time_read',
             'published',
             'views',
-            'category',
+            'category'
         ]

@@ -16,12 +16,14 @@ import { useParams } from "react-router-dom";
 import BlogList from "components/blog/search/BlogList";
 
 function Search({
+  get_categories,
+  categories,
+  search_blog,
+  search_blog_page,
   posts,
   count,
   next,
   previous,
-  search_blog,
-  search_blog_page,
 }) {
   const params = useParams();
   const term = params.term;
@@ -73,6 +75,7 @@ function Search({
       </Helmet>
       <Navbar />
       <div className="pt-24">
+        <CategoriesHeader categories={categories && categories} />
         <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
           {/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
           <div className="mx-auto max-w-full my-10">
@@ -91,6 +94,7 @@ function Search({
   );
 }
 const mapStateToProps = (state) => ({
+  categories: state.categories.categories,
   posts: state.blog.filtered_posts,
   count: state.blog.count,
   next: state.blog.next,
@@ -98,6 +102,7 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {
+  get_categories,
   search_blog,
   search_blog_page,
 })(Search);

@@ -10,6 +10,7 @@ import Category from "containers/pages/Category";
 import { AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Search from "containers/pages/Search";
+import PostDetail from "containers/pages/PostDetail";
 
 function AnimatedRoutes() {
     const location = useLocation()
@@ -27,8 +28,9 @@ function AnimatedRoutes() {
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<PostDetail />} />
                 <Route path="/category/:slug" element={<Category />} />
-                <Route path="/s=:term" element={<Search />} />
+                <Route path="/search=/:term" element={<Search />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
         </AnimatePresence>

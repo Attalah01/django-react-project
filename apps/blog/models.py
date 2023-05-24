@@ -6,7 +6,7 @@ from apps.category.models import Category
 
 # Create your models here.
 def blog_thumbnail_directory(instance, filename):
-    return 'blog/{0}/{1}'.format(instance.title, filename)
+    return 'media/blog/{0}/{1}'.format(instance.title, filename)
 
 class Post(models.Model):
     

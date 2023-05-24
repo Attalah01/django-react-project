@@ -1,12 +1,15 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status, permissions
-from django.db.models.query_utils import Q
+from rest_framework import status
+from rest_framework import permissions
 
 from .models import Post, ViewCount
 from apps.category.models import Category
+
 from .serializers import PostSerializer, PostListSerializer
 from .pagination import SmallSetPagination, MediumSetPagination, LargeSetPagination
+
+from django.db.models.query_utils import Q
 
 class BlogListView(APIView):
     permission_classes = (permissions.AllowAny,)
@@ -79,7 +82,7 @@ class PostDetailView(APIView):
         else:
             return Response({'error': 'Post doesnt exist'}, status=status.HTTP_404_NOT_FOUND)
         
-class SerachBlogView(APIView):
+class SearchBlogView(APIView):
     permission_classes = (permissions.AllowAny,)
     def get(self, request, format=None):
         

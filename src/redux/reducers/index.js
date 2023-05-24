@@ -4,5 +4,5 @@ import blog from "./blog";
 
 export default combineReducers({
     categories,
-    blog
+    blog,
 })
