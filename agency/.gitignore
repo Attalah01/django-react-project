@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/react,django,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,django,python
 
@@ -8,7 +7,7 @@
 *.pyc
 __pycache__/
 local_settings.py
-db.sqlite3/
+db.sqlite3
 db.sqlite3-journal
 media/
 
@@ -133,8 +132,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env/
-.venv/
+.env
+.venv
 env/
 venv/
 ENV/
@@ -270,7 +269,7 @@ logs
 **/*.backup.*
 **/*.back.*
 
-node_modules/
+node_modules
 bower_components
 
 *.sublime*
@@ -282,6 +281,3 @@ sketch
 /.vscode
 
 # End of https://www.toptal.com/developers/gitignore/api/react,django,python
-=======
-/.vscode
->>>>>>> staging
