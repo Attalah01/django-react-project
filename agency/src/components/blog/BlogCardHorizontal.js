@@ -8,16 +8,16 @@ function BlogCardHorizontal({ data, index }) {
       <Link
         to={`/blog/${data.slug}`}
         onMouseEnter={() => {
-          // const img = document.getElementById(index)
-          // img.classList.add('object-fill')
+          const img = document.getElementById(index)
+          img.classList.add('object-fill')
           const title = document.getElementById(`title` + data.id);
-          title.classList.add("text-orange-500");
+          title.classList.add("text-indigo-500");
         }}
         onMouseLeave={() => {
-          // const img = document.getElementById(index)
-          // img.classList.remove('object-fill')
+          const img = document.getElementById(index)
+          img.classList.remove('object-fill')
           const title = document.getElementById(`title` + data.id);
-          title.classList.remove("text-orange-500");
+          title.classList.remove("text-indigo-500");
         }}
         className="block relative hover:shadow-card rounded-md transition duration-300 ease-in-out"
       >
