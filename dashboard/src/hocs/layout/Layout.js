@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { connect } from "react-redux";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import logo from "assets/img/logo512.png"
 
 import Sidebar from "components/navigation/Sidebar";

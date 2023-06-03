@@ -1,12 +1,12 @@
 import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
+  // CalendarIcon,
+  // ChartBarIcon,
+  // FolderIcon,
   HomeIcon,
-  InboxIcon,
-  RssIcon,
+  // InboxIcon,
+  // RssIcon,
   GlobeAltIcon,
-  UsersIcon,
+  // UsersIcon,
 } from "@heroicons/react/24/outline";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -20,15 +20,15 @@ function Sidebar() {
   const navigation = [
     {
       name: "Dashboard",
-      href: "#",
+      href: "/dashboard",
       icon: HomeIcon,
-      current: location.pathname === "/" ? true : false,
+      current: location.pathname === "/dashboard" ? true : false,
     },
     {
       name: "Blog",
-      href: "#",
+      href: "/blog",
       icon: GlobeAltIcon,
-      current: location.pathname === "/" ? true : false,
+      current: location.pathname === "/blog" ? true : false,
     },
   ];
 
