@@ -7,24 +7,24 @@ import logo from "assets/img/logo512.png"
 import Sidebar from "components/navigation/Sidebar";
 import { Bars3Icon, XMarkIcon, CheckIcon } from "@heroicons/react/24/outline";
 import { Link, useNavigate } from "react-router-dom";
-// import { check_authenticated, load_user, logout, refresh } from 'redux/actions/auth/auth'
+import { check_authenticated, load_user, logout, refresh } from 'redux/actions/auth/auth';
 
 function Layout(
   {
     children,
-    // refresh,
-    // check_authenticated,
-    // load_user,
-    // user_loading,
-    // isAuthenticated,
-    // user,
-    // logout
+    refresh,
+    check_authenticated,
+    load_user,
+    user_loading,
+    isAuthenticated,
+    user,
+    logout
   }
 ) {
   useEffect(() => {
-    // refresh()
-    // check_authenticated()
-    // load_user()
+    refresh()
+    check_authenticated()
+    load_user()
   }, []);
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -33,7 +33,7 @@ function Layout(
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // logout();
+    logout();
     navigate("/");
   };
 
@@ -299,14 +299,14 @@ function Layout(
 }
 
 const mapStateToProps = (state) => ({
-  // user_loading: state.auth.user_loading,
-  // isAuthenticated: state.auth.isAuthenticated,
-  // user: state.auth.user,
+  user_loading: state.auth.user_loading,
+  isAuthenticated: state.auth.isAuthenticated,
+  user: state.auth.user,
 });
 
 export default connect(mapStateToProps, {
-  // refresh,
-  // check_authenticated,
-  // load_user,
-  // logout
+  refresh,
+  check_authenticated,
+  load_user,
+  logout
 })(Layout);
