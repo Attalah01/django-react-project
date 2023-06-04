@@ -1,15 +1,11 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import store from "store";
-import { Provider } from "react-redux";
+import Layout from "hocs/layout/Layout";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
-import AnimatedRoutes from "hocs/routes/Routes";
-import { Helmet, HelmetProvider } from "react-helmet-async"
-
-function App() {
+function Error404() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Asuna | Software Agency</title>
+        <title>Page Not Found</title>
         <meta
           name="description"
           content="Software digital marketing. Web and app services"
@@ -46,14 +42,8 @@ function App() {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-
-      <Provider store={store}>
-        <Router>
-          <AnimatedRoutes />
-        </Router>
-      </Provider>
+      <Layout>404 Not Found</Layout>
     </HelmetProvider>
   );
 }
-
-export default App;
+export default Error404;
